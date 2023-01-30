@@ -5,11 +5,14 @@ import java.util.Comparator;
 
 public class Main {
     public static void main(String[] args) {
+
+        //COMMENT 예제 삽입
         Process p1 = new Process("p1", 6);
         Process p2 = new Process("p2", 8);
         Process p3 = new Process("p3", 7);
         Process p4 = new Process("p4", 3);
 
+        //COMMENT 솔루션
         nonpreferredSjf(p1, p2, p3, p4);
 //        preOccupancySjf(p1, p2, p3, p4);
     }
@@ -25,11 +28,6 @@ public class Main {
                 return p1.getBurstTime() - p2.getBurstTime();
             }
         });
-
-//        processes[1].addWaitingTime(processes[0].getBurstTime());
-//        processes[2].addWaitingTime(processes[0].getBurstTime() + processes[1].getBurstTime());
-//        processes[3].addWaitingTime(processes[0].getBurstTime() + processes[1].getBurstTime()
-//                                    + processes[2].getBurstTime());
 
         for (int i = 1; i < processes.length; i++) {
             for (int j = 0; j < i; j++) {
