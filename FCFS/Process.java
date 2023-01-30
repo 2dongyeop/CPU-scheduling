@@ -15,10 +15,6 @@ public class Process {
         return burstTime;
     }
 
-    public void addWaitingTime() {
-        this.waitingTime++;
-    }
-
     public void addWaitingTime(int waitingTime) {
         this.waitingTime += waitingTime;
     }
