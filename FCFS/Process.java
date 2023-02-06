@@ -22,4 +22,10 @@ public class Process {
     public int getWaitingTime() {
         return waitingTime;
     }
+
+    @Override
+    public String toString() {
+        return "프로세스 " + name + "의 남은 시간 : " + burstTime
+                + " , 누적 대기 시간 : " + waitingTime;
+    }
 }

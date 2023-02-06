@@ -31,6 +31,7 @@ public class Main {
             for (int j = 0; j < i; j++) {
                 processList.get(i).addWaitingTime(processList.get(j).getBurstTime());
             }
+            System.out.println(processList.get(i).toString());
         }
 
         for (Process p : processes) {
