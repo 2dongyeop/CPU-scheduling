@@ -33,6 +33,7 @@ public class Main {
             for (int j = 0; j < i; j++) {
                 processes[i].addWaitingTime(processes[j].getBurstTime());
             }
+            System.out.println(processes[i].toString());
         }
 
         int waitingTime = 0;
