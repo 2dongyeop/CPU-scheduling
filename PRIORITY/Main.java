@@ -4,6 +4,8 @@ import java.util.Arrays;
 import java.util.Comparator;
 
 public class Main {
+    private static final int TIME_SLICE = 4;
+
     public static void main(final String... args) {
 
         //COMMENT 예제 삽입
@@ -13,11 +15,14 @@ public class Main {
         Process p4 = new Process("p4", 1, 5);
         Process p5 = new Process("p5", 5, 2);
 
+        //COMMENT 비선점
         priority(p1, p2, p3, p4, p5);
+        System.out.println("================");
     }
 
     /**
      * 비선점 우선순위 스케줄링
+     *
      * @param processes
      */
     private static void priority(final Process... processes) {
