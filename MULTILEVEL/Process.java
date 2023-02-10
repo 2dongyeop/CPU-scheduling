@@ -33,6 +33,10 @@ public class Process {
         this.waitingTime += time;
     }
 
+    public void reduceBurstTime(int timeSlice) {
+        this.remainBurstTime -= timeSlice;
+    }
+
     @Override
     public String toString() {
         return "프로세스 " + name + "의 남은 시간 : " + remainBurstTime
